@@ -2,11 +2,10 @@
 ___
 
 ### Description
-___
 
 This image runs [*PostgreSQL*](https://www.postgresql.org/) on a Debian Jessie Linux distribution.
 
-The image extends the official PostgreSQL one, adding the support for the [*Bottled Water*](https://github.com/confluentinc/bottledwater-pg)  extension.
+The image extends the official [*PostgreSQL*](https://hub.docker.com/_/postgres/) one, adding the support for the [*Bottled Water*](https://github.com/confluentinc/bottledwater-pg)  extension.
 
 The *latest* tag of this image is build with the [latest stable](https://www.postgresql.org/) release of PostgreSQL.
 
@@ -29,7 +28,7 @@ Run with Docker Compose:
 
     docker-compose -p docker up
 
-Setting the project name to *docker* with the **-p** option is useful to share the named data volumes created with the containers created with other docker-compose.yml configurations of my serie (for example the one of the [*Apache Hive Docker image*](https://hub.docker.com/r/mcapitanio/hive/) or [Apache Hue Docker image](https://hub.docker.com/r/mcapitanio/hue/).
+Setting the project name to *docker* with the **-p** option is useful to share the named data volumes created with the containers coming from other docker-compose.yml configurations of mine (for example the one of the [*Apache Hive Docker image*](https://hub.docker.com/r/mcapitanio/hive/) or [Apache Hue Docker image](https://hub.docker.com/r/mcapitanio/hue/).
 
 The PostgreSQL port on the host is remapped to **15432**.
 
