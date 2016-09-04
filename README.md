@@ -36,6 +36,7 @@ There is one named volumes defined:
 
 - **postgres_data** wich points to PGDATA
 
+
 ### Available tags:
 
 - PostgreSQL 9.5 ([9.5](https://github.com/mcapitanio/docker-postgres/blob/9.5/Dockerfile), [latest](https://github.com/mcapitanio/docker-postgres/blob/latest/Dockerfile))
