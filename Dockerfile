@@ -46,4 +46,13 @@ RUN cd bottledwater-pg; \
     make; \
     make install
 
-COPY pg_hba.conf /var/lib/postgresql/data
+COPY docker-entrypoint.sh /opt/docker
+RUN chmod 765 /opt/docker/docker-entrypoint.sh
+
+COPY pg_hba.conf /opt/docker
+
+
+
+ENTRYPOINT ["/opt/docker/docker-entrypoint.sh"]
+
+CMD ["postgres"]
