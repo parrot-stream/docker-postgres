@@ -23,14 +23,18 @@ For example, if you want PostgreSQL release 9.4 you can pull the image with:
 
     docker pull mcapitanio/postgres:9.4
 
-
 Run with Docker Compose:
 
     docker-compose -p docker up
 
 Setting the project name to *docker* with the **-p** option is useful to share the named data volumes created with the containers coming from other docker-compose.yml configurations of mine (for example the one of the [*Apache Hive Docker image*](https://hub.docker.com/r/mcapitanio/hive/) or [Apache Hue Docker image](https://hub.docker.com/r/mcapitanio/hue/).
 
-The PostgreSQL port on the host is remapped to **15432**.
+The PostgreSQL port on the host is remapped to **15432** so you can connect to PostgreSQL using:
+
+    hostname: localhost
+    port: 15432
+    username: postgres
+    password: postgres
 
 There is one named volumes defined:
 
