@@ -4,9 +4,16 @@ MAINTAINER Matteo Capitanio <matteo.capitanio@gmail.com>
 
 USER root
 
-ENV http_proxy ${http_proxy}
-ENV https_proxy ${https_proxy}
+ARG httpProxyHost
+ARG httpProxyPort
+ARG httpProxyUrl
+ARG httpsProxyUrl
+
+ENV http_proxy $httpProxyUrl
+ENV https_proxy $httpsProxyUrl
 ENV no_proxy ${no_proxy}
+ENV httpProxyHost $httpProxyHost
+ENV httpProxyPort $httpProxyPort
 
 ENV AVRO_VER 1.8.1
 ENV RDKAFKA_VER 0.9.1

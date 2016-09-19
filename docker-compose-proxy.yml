@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+
+    postgres:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+               httpProxyUrl: http://10.0.2.2:3128
+               httpsProxyUrl: http://10.0.2.2:3128
+               httpProxyHost: 10.0.2.2
+               httpProxyPort: 3128            
+        image: mcapitanio/postgres:latest
+        networks:
+            - hadoop
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        ports:
+            - "15432:5432"
+        environment:
+            POSTGRES_PASSWORD: postgres
+
+volumes:
+    postgres_data:
+
+networks:
+    hadoop:
+        driver: bridge
