@@ -50,8 +50,7 @@ COPY docker-entrypoint.sh /opt/docker
 RUN chmod 765 /opt/docker/docker-entrypoint.sh
 
 COPY pg_hba.conf /opt/docker
-
-
+COPY postgresql.conf /opt/docker
 
 ENTRYPOINT ["/opt/docker/docker-entrypoint.sh"]
 

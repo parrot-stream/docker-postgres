@@ -93,9 +93,20 @@ if [ "$1" = 'postgres' ]; then
 		echo
 
                 cp /opt/docker/pg_hba.conf /var/lib/postgresql/data
+                cp /opt/docker/postgres.conf /var/lib/postgresql/data
 	fi
 
 	exec gosu postgres "$@"
+	
+	echo -e "\n\n--------------------------------------------------------------------------------"
+        echo -e "You can now connect to PostgreSQL using:"
+        echo -e ""
+        echo -e "hostname:          localhost"
+        echo -e "port:              15432"
+        echo -e "username:          postgres"
+        echo -e "password:          postgres\n"
+        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio.gmail.com>"
+        echo -e "--------------------------------------------------------------------------------\n\n"
 fi
 
 exec "$@"
