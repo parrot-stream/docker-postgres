@@ -93,7 +93,7 @@ if [ "$1" = 'postgres' ]; then
 		echo
 
                 cp /opt/docker/pg_hba.conf /var/lib/postgresql/data
-                cp /opt/docker/postgres.conf /var/lib/postgresql/data
+                cp /opt/docker/postgresql.conf /var/lib/postgresql/data
 	fi
 
 	exec gosu postgres "$@"
