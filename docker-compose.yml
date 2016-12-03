@@ -3,6 +3,9 @@ version: "2"
 services:
 
     postgres:
+        build:
+            context: .
+            dockerfile: Dockerfile        
         image: mcapitanio/postgres:latest
         networks:
             - hadoop
