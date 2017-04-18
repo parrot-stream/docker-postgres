@@ -6,13 +6,13 @@ services:
         build:
             context: .
             dockerfile: Dockerfile        
-        image: mcapitanio/postgres:latest
+        image: mcapitanio/postgres:9.6
         networks:
             - hadoop
         volumes:
             - postgres_data:/var/lib/postgresql/data
         ports:
-            - "15432:5432"
+            - "5432:5432"
         environment:
             POSTGRES_PASSWORD: postgres
 
