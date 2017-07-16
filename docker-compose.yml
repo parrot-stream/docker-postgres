@@ -6,7 +6,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile        
-        image: mcapitanio/postgres:9.5.3
+        image: mcapitanio/postgres:9.5
         networks:
             - hadoop
         ports:
