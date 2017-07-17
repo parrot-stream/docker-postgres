@@ -21,7 +21,7 @@ You can also find other images based on different PostgreSQL releases, using a d
     docker pull mcapitanio/postgres:[postgres-release]
 
 
-For example, if you want PostgreSQL release 9.5.3 you can pull the image with:
+For example, if you want the latest PostgreSQL major release 9.5 (actually 9.5.7) you can pull the image with:
 
     docker pull mcapitanio/postgres:9.5
 
@@ -29,10 +29,10 @@ Run with Docker Compose:
 
     docker-compose up
 
-The PostgreSQL port on the host is remapped to **5432** so you can connect to PostgreSQL using:
+You can access PostgreSql using:
 
     hostname: localhost
-    port: 5432
+    port:     5432
     username: postgres
     password: postgres
 
