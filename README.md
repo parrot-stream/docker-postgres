@@ -7,7 +7,6 @@ This image runs [*PostgreSQL*](https://www.postgresql.org/) on a Debian Jessie L
 
 The image extends the official [*PostgreSQL*](https://hub.docker.com/_/postgres/) one, adding the support for:
 
- * the [*Bottled Water*](https://github.com/confluentinc/bottledwater-pg) extension
  * the [*Debezium Postgres Decoderbufs*](https://github.com/debezium/postgres-decoderbufs.git) plugin
 
 The *latest* tag of this image is build with the [latest stable](https://www.postgresql.org/) release of PostgreSQL.
@@ -22,7 +21,7 @@ You can also find other images based on different PostgreSQL releases, using a d
     docker pull mcapitanio/postgres:[postgres-release]
 
 
-For example, if you want PostgreSQL release 9.5 you can pull the image with:
+For example, if you want the latest PostgreSQL major release 9.5 (actually 9.5.7) you can pull the image with:
 
     docker pull mcapitanio/postgres:9.5
 
@@ -30,17 +29,12 @@ Run with Docker Compose:
 
     docker-compose up
 
-The PostgreSQL port on the host is remapped to **5432** so you can connect to PostgreSQL using:
+You can access PostgreSql using:
 
     hostname: localhost
-    port: 5432
+    port:     5432
     username: postgres
     password: postgres
-
-There is one named volumes defined:
-
-- **postgres_data** wich points to PGDATA
-
 
 ### Available tags:
 

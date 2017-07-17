@@ -92,8 +92,8 @@ if [ "$1" = 'postgres' ]; then
 		echo 'PostgreSQL init process complete; ready for start up.'
 		echo
 
-                cp /opt/docker/pg_hba.conf /var/lib/postgresql/data
-                cp /opt/docker/postgresql.conf /var/lib/postgresql/data
+                cp /pg_hba.conf /var/lib/postgresql/data
+                cp /postgresql.conf /var/lib/postgresql/data
 	fi
 
 	exec gosu postgres "$@"
@@ -102,7 +102,7 @@ if [ "$1" = 'postgres' ]; then
         echo -e "You can now connect to PostgreSQL using:"
         echo -e ""
         echo -e "hostname:          localhost"
-        echo -e "port:              15432"
+        echo -e "port:              5432"
         echo -e "username:          postgres"
         echo -e "password:          postgres\n"
         echo -e "Mantainer: Matteo Capitanio <matteo.capitanio.gmail.com>"
@@ -110,69 +110,4 @@ if [ "$1" = 'postgres' ]; then
 fi
 
 exec "$@"
-
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-B
-B
-B
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
-A
 
