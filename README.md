@@ -1,4 +1,4 @@
-# **postgres**
+Chan# **postgres**
 ___
 
 ### Description
@@ -40,5 +40,5 @@ You can access PostgreSql using:
 
 ### Available tags:
 
-- PostgreSQL 9.6 ([9.6](https://github.com/mcapitanio/docker-postgres/blob/9.6/Dockerfile), [latest](https://github.com/mcapitanio/docker-postgres/blob/latest/Dockerfile))
-- PostgreSQL 9.5 ([9.5](https://github.com/mcapitanio/docker-postgres/blob/9.5/Dockerfile))
+- PostgreSQL 9.6 ([9.6](https://github.com/parrot-stream/docker-postgres/blob/9.6/Dockerfile), [latest](https://github.com/parrot-stream/docker-postgres/blob/latest/Dockerfile))
+- PostgreSQL 9.5 ([9.5](https://github.com/parrot-stream/docker-postgres/blob/9.5/Dockerfile))
