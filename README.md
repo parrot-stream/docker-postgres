@@ -13,21 +13,23 @@ The *latest* tag of this image is build with the [latest stable](https://www.pos
 
 You can pull it with:
 
-    docker pull mcapitanio/postgres
+    docker pull parrotstream/postgres
 
 
 You can also find other images based on different PostgreSQL releases, using a different tag in the following form:
 
-    docker pull mcapitanio/postgres:[postgres-release]
+    docker pull parrotstream/postgres:[postgres-release]
 
 
 For example, if you want the latest PostgreSQL major release 9.5 (actually 9.5.7) you can pull the image with:
 
-    docker pull mcapitanio/postgres:9.5
+    docker pull parrotstream/postgres:9.5
 
 Run with Docker Compose:
 
-    docker-compose up
+    docker-compose -p parrot up
+
+Setting the project name to *parrot* with the **-p** option is useful to share the network created with the containers coming from other Parrot docker-compose.yml configurations.
 
 You can access PostgreSql using:
 
@@ -38,5 +40,5 @@ You can access PostgreSql using:
 
 ### Available tags:
 
-- PostgreSQL 9.6 ([9.6](https://github.com/mcapitanio/docker-postgres/blob/9.6/Dockerfile), [latest](https://github.com/mcapitanio/docker-postgres/blob/latest/Dockerfile))
-- PostgreSQL 9.5 ([9.5](https://github.com/mcapitanio/docker-postgres/blob/9.5/Dockerfile))
+- PostgreSQL 9.6 ([9.6](https://github.com/parrot-stream/docker-postgres/blob/9.6/Dockerfile), [latest](https://github.com/parrot-stream/docker-postgres/blob/latest/Dockerfile))
+- PostgreSQL 9.5 ([9.5](https://github.com/parrot-stream/docker-postgres/blob/9.5/Dockerfile))
