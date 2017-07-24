@@ -105,7 +105,7 @@ if [ "$1" = 'postgres' ]; then
         echo -e "port:              5432"
         echo -e "username:          postgres"
         echo -e "password:          postgres\n"
-        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio.gmail.com>"
+        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio@gmail.com>"
         echo -e "--------------------------------------------------------------------------------\n\n"
 fi
 

@@ -14,6 +14,7 @@ RUN apt-get update -y; \
     add-apt-repository "deb http://ftp.debian.org/debian testing main contrib"; \
     apt-get update; \
     apt-get install -y libprotobuf-c-dev=1.2.*
+RUN apt-get clean all
 
 WORKDIR /
 
