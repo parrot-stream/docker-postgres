@@ -6,14 +6,17 @@ services:
         build:
             context: .
             dockerfile: Dockerfile        
-        image: mcapitanio/postgres:latest
+        image: parrotstream/postgres:latest
         networks:
-            - hadoop
+            - parrot
         ports:
             - "5432:5432"
         environment:
             POSTGRES_PASSWORD: postgres
 
 networks:
-    hadoop:
+    default:
+        external:
+            name: parrot
+    parrot:
         driver: bridge
