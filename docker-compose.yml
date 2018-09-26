@@ -6,7 +6,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile        
-        image: parrotstream/postgres:9.5
+        image: parrotstream/postgres:10.5
         networks:
             - parrot
         ports:
