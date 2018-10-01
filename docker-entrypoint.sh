@@ -92,21 +92,21 @@ if [ "$1" = 'postgres' ]; then
 		echo 'PostgreSQL init process complete; ready for start up.'
 		echo
 
-                cp /pg_hba.conf /var/lib/postgresql/data
-                cp /postgresql.conf /var/lib/postgresql/data
+        cp /pg_hba.conf /var/lib/postgresql/data
+        cp /postgresql.conf /var/lib/postgresql/data
 	fi
 
 	exec gosu postgres "$@"
 	
 	echo -e "\n\n--------------------------------------------------------------------------------"
-        echo -e "You can now connect to PostgreSQL using:"
-        echo -e ""
-        echo -e "hostname:          localhost"
-        echo -e "port:              5432"
-        echo -e "username:          postgres"
-        echo -e "password:          postgres\n"
-        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio@gmail.com>"
-        echo -e "--------------------------------------------------------------------------------\n\n"
+    echo -e "You can now connect to PostgreSQL using:"
+    echo -e ""
+    echo -e "hostname:          localhost"
+    echo -e "port:              5432"
+    echo -e "username:          $POSTGRES_USER"
+    echo -e "password:          $POSTGRES_PASSWORD\n"
+    echo -e "Mantainer: Matteo Capitanio <matteo.capitanio@gmail.com>"
+    echo -e "--------------------------------------------------------------------------------\n\n"
 fi
 
 exec "$@"
