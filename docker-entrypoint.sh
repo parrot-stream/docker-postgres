@@ -156,6 +156,16 @@ if [ "$1" = 'postgres' ]; then
 		PGUSER="${PGUSER:-$POSTGRES_USER}" \
 		pg_ctl -D "$PGDATA" -m fast -w stop
 
+		echo -e "\n\n--------------------------------------------------------------------------------"
+        echo -e "You can now connect to PostgreSQL using:"
+        echo -e ""
+        echo -e "hostname:          localhost"
+        echo -e "port:              5432"
+        echo -e "username:          $POSTGRES_USER"
+        echo -e "password:          $PGPASSWORD\n"
+        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio@gmail.com>"
+        echo -e "--------------------------------------------------------------------------------\n\n"
+
 		unset PGPASSWORD
 
 		echo
@@ -165,15 +175,7 @@ if [ "$1" = 'postgres' ]; then
 		cp /pg_hba.conf /var/lib/postgresql/data
         cp /postgresql.conf /var/lib/postgresql/data
 
-		echo -e "\n\n--------------------------------------------------------------------------------"
-        echo -e "You can now connect to PostgreSQL using:"
-        echo -e ""
-        echo -e "hostname:          localhost"
-        echo -e "port:              5432"
-        echo -e "username:          postgres"
-        echo -e "password:          postgres\n"
-        echo -e "Mantainer: Matteo Capitanio <matteo.capitanio@gmail.com>"
-        echo -e "--------------------------------------------------------------------------------\n\n"
+
 	fi
 fi
 
